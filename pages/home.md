@@ -1,10 +1,10 @@
 ---
 layout: layouts/home.njk
-title: Home
+title: Úvod
 date: 2016-01-01T00:00:00.000Z
 permalink: /
 eleventyNavigation:
-  key: Home
+  key: uvod
   order: 0
 ---
 # Test web
