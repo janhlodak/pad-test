@@ -6,7 +6,7 @@ metaDescription: This is a sample meta description. If one is not present in
   instead.
 section: contact
 date: 2018-01-01
-permalink: /kontact/index.html
+permalink: /kontakt/index.html
 eleventyNavigation:
   key: Kontakt
   order: 3
