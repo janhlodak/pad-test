@@ -1,15 +1,33 @@
 <!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="{{ metadata.language }}">
 
+	
 	{% include "components/head.njk" %}
+	
 
 	<body>
+		
+       <div class="wrapper">
+		   
+		   
+		   <div class="nav_1">
+		   <a class="nav_link" href="{{ metadata.url }}">Úvod</a>
+		   </div>
+		   <div class="nav_2">
+		   <a class="nav_link" href="{{ metadata.url }}/kto-sme">Kto sme</a>
+		   </div>
+		   <div class="nav_3">
+		   <a class="nav_link" href="{{ metadata.url }}/blog">Blog</a>
+		   </div>
+		   <div class="nav_4">
+		   <a class="nav_link" href="{{ metadata.url }}/kontakt">Kontakt</a>
+		   </div>
+		   
 
-		<header>
+		<header class="brand">
 			<em>
 				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
+			</em>	
 		</header>
 
 		<main>
@@ -17,7 +35,7 @@
 		</main>
 
 		{% include "components/footer.njk" %}
-
+       </div>
 	</body>
 
 </html>
