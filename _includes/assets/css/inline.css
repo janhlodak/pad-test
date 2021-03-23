@@ -16,6 +16,7 @@ body {
 	margin: 0;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	color: white;
+
 }
 
 body {
@@ -24,6 +25,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 	background-color: var(--background);
 }
+	
 
 main {
 	grid-column-start: 1;
@@ -35,17 +37,34 @@ main {
 	display: grid;
 	display: -ms-grid;
 	grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, auto);;
+    grid-template-rows: repeat(5, auto);
+	border: 1px solid white;
 }
 
 .brand{
     grid-column-start: 1;
     grid-column-end: 5;
 	grid-row: 2;
-	border-color: white;
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
-	border-top: O;
+	border-bottom: 1px solid white;
+}
+
+.content_main_full{
+    grid-column-start: 1;
+    grid-column-end: 5;
+	grid-row: 3;
+}
+
+.content_main{
+    grid-column-start: 1;
+    grid-column-end: 3;
+	grid-row: 3;
+}
+
+.content_side{
+    grid-column-start: 3;
+    grid-column-end: 5;
+	grid-row: 3;
+	border-left: 1px solid white;
 }
 
 h1 {
@@ -109,7 +128,7 @@ pre {
 header > em {
 	display: block;
 	font-size: 4em;
-	margin: 1em auto 1em;
+	margin: 1.25em auto 1.25em;
 	font-weight: 400;
 	font-style: normal;
 	font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
@@ -126,7 +145,22 @@ header > em {
 		font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
 		text-align: center;
 	}
+
   }
+.nav_grid_reset {
+	grid-column-start: 1;
+    grid-column-end: 5;
+	grid-row: 1;
+}
+
+.nav_vrch {
+	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+	position: fixed;
+    top: 0;
+}
 
 .nav_1{
 	grid-column-start: 1;
@@ -134,7 +168,7 @@ header > em {
 	grid-row: 1;
 	border-color: white;
     border-style: solid;
-    border-width: 1px 0 1px 1px;
+    border-width: 0 0 1px 0;
 	margin: 0;
 	padding: 0;
 }
@@ -145,7 +179,7 @@ header > em {
 	grid-row: 1;
 	border-color: white;
     border-style: solid;
-    border-width: 1px 0 1px 1px;
+    border-width: 0 0 1px 1px;
 	margin: 0;
 	padding: 0;
 }
@@ -156,7 +190,7 @@ header > em {
 	grid-row: 1;
 	border-color: white;
     border-style: solid;
-    border-width: 1px 0 1px 1px;
+    border-width: 0 0 1px 1px;
 	margin: 0;
 	padding: 0;
 }
@@ -165,7 +199,9 @@ header > em {
 	grid-column-start: 4;
     grid-column-end: 5;
 	grid-row: 1;
-	border: white 1px solid;
+	border-color: white;
+    border-style: solid;
+    border-width: 0 0 1px 1px;
 	margin: 0;
 	padding: 0;
 }
@@ -173,10 +209,19 @@ header > em {
 .nav_link{
 	display: block;
 	width: 100%;
-	height: 3em;
-	line-height: 3em;
+	height: 3.5em;
+	line-height: 3.5em;
 	text-align: center;
 	margin: auto;
+}
+
+footer{
+	grid-column-start: 1;
+    grid-column-end: 5;
+	grid-row: 4;
+	border-top: 1px white solid;
+	height: 5rem;
+
 }
 
 /* Posts List */
