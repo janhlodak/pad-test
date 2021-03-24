@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312.06 328.5"><defs>
+<style>.cls-1{fill:none;stroke:url('#logo-gradient');stroke-linecap:round;stroke-linejoin:round;stroke-width:1px;}</style>
+<linearGradient id="logo-gradient" x1="50%" y1="0%" x2="75%" y2="100%" > 
+            
+            <stop offset="0%" stop-color="#F79533">
+                <animate attributeName="stop-color" values="#F79533; #F37055; #EF4E7B; #A166AB; #5073B8; #1098AD; #07B39B; #6DBA82; #F79533" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+            <stop offset="100%" stop-color="#F79533">
+                <animate attributeName="stop-color" values="#F37055; #EF4E7B; #A166AB; #5073B8; #1098AD; #07B39B; #6DBA82; #F79533; #F37055" dur="5s" repeatCount="indefinite"></animate>
+            </stop>
+
+        </linearGradient>
+
+</defs>
+<title>brand_1</title>
+<g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+<polyline class="cls-1" points="0.27 328.23 16.65 0.27 33.09 328.23 49.47 0.27 65.85 328.23 82.23 0.27 98.67 328.23 115.05 0.27 131.43 328.23 147.87 0.27 164.25 328.23 180.63 0.27 197.01 328.23 213.45 0.27 229.83 328.23 246.21 0.27 262.65 328.23 279.03 0.27 295.41 328.23 311.79 0.27"/></g></g></svg>

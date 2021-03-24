@@ -20,31 +20,26 @@ body {
 }
 
 body {
-	display: grid;
-	height: 100vh;
-	grid-template-rows: auto 1fr auto;
 	background-color: var(--background);
-}
-	
-
-main {
-	grid-column-start: 1;
-    grid-column-end: 3;
-	grid-row: 3;
 }
 
 .wrapper{
 	display: grid;
 	display: -ms-grid;
 	grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+               "nav1  nav2  nav3  nav4"
+               "intro  intro  brand1  brand1"
+			   "intro  intro  brand1  brand1"
+			   "brand2  brand2  project1 project1"
+			   "brand2  brand2  project2  project2"
+			   "footer  footer  footer  footer";
 	border: 1px solid white;
 }
 
-.brand{
-    grid-column-start: 1;
-    grid-column-end: 5;
-	grid-row: 2;
+
+.intro{
+    grid-area: intro;
 	border-bottom: 1px solid white;
 }
 
@@ -55,21 +50,34 @@ main {
 }
 
 .content_main{
-    grid-column-start: 1;
-    grid-column-end: 3;
-	grid-row: 3;
+    grid-area: brand2;
+	padding: 2rem;
 }
 
 .content_side{
-    grid-column-start: 3;
-    grid-column-end: 5;
-	grid-row: 3;
+    grid-area: brand1;
 	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 2rem;
+}
+
+.content_project_1{
+    grid-area: project1;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 2rem;
+}
+
+.content_project_2{
+    grid-area: project2;
+	border-left: 1px solid white;
+	padding: 2rem;
 }
 
 h1 {
 	font-family: "Roboto Mono";
 	font-weight: 200;
+	font-size: 2rem;
 }
 
 p,
@@ -102,11 +110,6 @@ main {
 	padding-bottom: 2em;
 }
 
-main :first-child,
-main > article :first-child {
-	margin-top: 0;
-}
-
 pre {
 	font-size: 14px;
 	direction: ltr;
@@ -127,31 +130,13 @@ pre {
 /* Header Logo (style as h2) */
 header > em {
 	display: block;
-	font-size: 4em;
-	margin: 1.25em auto 1.25em;
+	font-size: 3rem;
+	margin-bottom: 1rem;
 	font-weight: 400;
 	font-style: normal;
 	font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
-	text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-	header > em {
-		display: block;
-		font-size: 2em;
-		margin: 1em auto 1em;
-		font-weight: 400;
-		font-style: normal;
-		font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
-		text-align: center;
-	}
-
-  }
-.nav_grid_reset {
-	grid-column-start: 1;
-    grid-column-end: 5;
-	grid-row: 1;
-}
 
 .nav_vrch {
 	
@@ -163,9 +148,7 @@ header > em {
 }
 
 .nav_1{
-	grid-column-start: 1;
-    grid-column-end: 2;
-	grid-row: 1;
+	grid-area: nav1;
 	border-color: white;
     border-style: solid;
     border-width: 0 0 1px 0;
@@ -174,9 +157,7 @@ header > em {
 }
 
 .nav_2{
-	grid-column-start: 2;
-    grid-column-end: 3;
-	grid-row: 1;
+	grid-area: nav2;
 	border-color: white;
     border-style: solid;
     border-width: 0 0 1px 1px;
@@ -185,9 +166,7 @@ header > em {
 }
 
 .nav_3{
-	grid-column-start: 3;
-    grid-column-end: 4;
-	grid-row: 1;
+	grid-area: nav3;
 	border-color: white;
     border-style: solid;
     border-width: 0 0 1px 1px;
@@ -196,9 +175,7 @@ header > em {
 }
 
 .nav_4{
-	grid-column-start: 4;
-    grid-column-end: 5;
-	grid-row: 1;
+	grid-area: nav4;
 	border-color: white;
     border-style: solid;
     border-width: 0 0 1px 1px;
@@ -215,13 +192,18 @@ header > em {
 	margin: auto;
 }
 
+
 footer{
-	grid-column-start: 1;
-    grid-column-end: 5;
-	grid-row: 4;
+	grid-area: footer;
 	border-top: 1px white solid;
 	height: 5rem;
 
+}
+
+.responsive_img{
+	width: 75%;
+    height: auto;
+	margin: 1rem;
 }
 
 /* Posts List */
@@ -303,3 +285,57 @@ button {
 		font-size: 1.1rem;
 	}
 }
+
+@media only screen and (max-width: 800px) {
+	/* For mobile phones: */
+	.wrapper{
+	grid-template-areas:
+               "nav1  nav1  nav2  nav2"
+			   "nav3  nav3  nav4  nav4"
+               "intro  intro  intro  intro"
+			   "brand1  brand1  brand1  brand1"
+			   "project1  project1  project1  project1"
+			   "project2  project2  project2  project2"
+			   "brand2  brand2  brand2  brand2 "
+			   "footer  footer  footer	footer";
+	}
+
+	.nav_3{	
+		grid-area: nav3;
+	border-color: white;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+	margin: 0;
+	padding: 0;
+	}
+
+	.content_side{
+		grid-area: brand1;
+		border-bottom: 1px solid white;
+		border-left: 0;
+		padding: 2rem;
+	}
+	
+	.content_project_1{
+		grid-area: project1;
+		border-bottom: 1px solid white;
+		border-left: 0;
+		padding: 2rem;
+	}
+	
+	.content_project_2{
+		grid-area: project2;
+		border-bottom: 1px solid white;
+		border-left: 0;
+		padding: 2rem;
+	}
+
+  }
+
+  @media only screen and (max-width: 1250px) {
+	
+	h1{
+		font-size: 1.5rem;
+	}
+
+  }

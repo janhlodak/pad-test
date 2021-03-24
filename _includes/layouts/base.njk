@@ -14,22 +14,15 @@
 		   <a class="nav_link" href="{{ metadata.url }}">Úvod</a>
 		   </div>
 		   <div class="nav_2">
-		   <a class="nav_link" href="{{ metadata.url }}/kto-sme">Kto sme</a>
+		   <a class="nav_link" href="{{ metadata.url }}/aktualne">Aktuálne</a>
 		   </div>
 		   <div class="nav_3">
-		   <a class="nav_link" href="{{ metadata.url }}/blog">Blog</a>
+		   <a class="nav_link" href="{{ metadata.url }}/kto-sme">Kto sme</a>
 		   </div>
 		   <div class="nav_4">
 		   <a class="nav_link" href="{{ metadata.url }}/kontakt">Kontakt</a>
 		   </div>
-		   
-
-		<header class="brand">
-			<em>
-				<a href="{{ '/' | url }}">Peripetie architektov doby</a>
-			</em>	
-		</header>
-
+		  
 			{{ layoutContent | safe }}
 
 		{% include "components/footer.njk" %}
