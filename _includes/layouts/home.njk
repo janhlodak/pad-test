@@ -4,22 +4,33 @@ section: home
 ---
 
 <header class="intro">
-			<em>
+	<div class="brand_container">
+      <center>
+        <img src="_includes/assets/img/brand_1.svg" class="responsive_img">	
+      </center>
+  <div class="top-left">
+	        <em>
 				<a href="{{ '/' | url }}">Peripetie</br>architektov</br>doby</a>
-			</em>	
-			{{ layoutContent | safe }}
-		</header>
+			</em>
+			</div>
+   </div>
+</header>
 
 <aside class="content_side">
-<center>
-<img src="_includes/assets/img/brand_1.svg" class="responsive_img">	
-</center>
+   {{ layoutContent | safe }}
 </aside>
 
 <main class="content_main">
+	<div class="brand_container">
 <center>
 <img src="_includes/assets/img/brand_2.svg" class="responsive_img">	
-</center>			
+</center>		
+<div class="top-left">
+	        <em>
+				<a href="{{ '/' | url }}">Naše</br>aktivity</a>
+			</em>
+			</div>
+   </div>	
 </main>
 
 <aside class="content_project_1">
